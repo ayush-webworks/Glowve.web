@@ -3307,3 +3307,122 @@ button,
     padding: 6px 7px;
   }
 }
+
+/* GLOWVÉ — MOBILE FIX */
+@media (max-width: 600px) {
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Compact main header */
+  .header {
+    padding: 14px 16px !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 23px !important;
+    letter-spacing: 1px;
+  }
+
+  .head-actions {
+    max-width: 100%;
+    gap: 6px !important;
+  }
+
+  .head-actions button {
+    padding: 8px 10px !important;
+    min-height: 36px;
+    font-size: 13px !important;
+  }
+
+  /* Remove extra hero navigation */
+  .cream-hero-nav {
+    display: none !important;
+  }
+
+  /* Hero layout and readable text */
+  .cream-hero {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+
+  .cream-hero-model {
+    object-fit: cover !important;
+    object-position: 55% center !important;
+  }
+
+  .cream-hero-copy {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 100px 20px 30px !important;
+    margin: 0 !important;
+  }
+
+  .cream-hero-copy h1 {
+    max-width: 100% !important;
+    font-size: clamp(42px, 10vw, 56px) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -1.5px !important;
+    overflow-wrap: normal;
+  }
+
+  .cream-hero-copy > p:not(.cream-kicker) {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    overflow-wrap: break-word;
+  }
+
+  /* Prevent floating elements from covering hero text */
+  .cream-hero [class*="stat"],
+  .cream-hero [class*="floating"],
+  .cream-hero [class*="float"] {
+    display: none !important;
+  }
+
+  /* Keep product cards from squeezing into the text */
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .products > *,
+  .product-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* Better spacing for the ticker and sections */
+  .section {
+    padding: 38px 16px !important;
+  }
+
+  /* Product detail page */
+  .detail-product {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .detail-product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
