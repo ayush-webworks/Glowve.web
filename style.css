@@ -2948,3 +2948,362 @@ footer {
     font-size: 22px;
   }
 }
+
+
+/* ===================================
+   GLOWVÉ — RESPONSIVE DESIGN OVERRIDE
+   Paste at the END of style.css
+=================================== */
+
+:root {
+  --glowve-ink: #30232b;
+  --glowve-plum: #552d43;
+  --glowve-pink: #dca6b3;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 17px;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 6.5vw, 6rem);
+  line-height: 1.04;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.12;
+}
+
+p,
+label,
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+button,
+.btn {
+  min-height: 44px;
+  font-size: 15px;
+}
+
+.logo {
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  letter-spacing: .06em;
+}
+
+/* Hide the extra navigation inside the hero */
+.cream-hero-nav {
+  display: none !important;
+}
+
+/* Larger, more readable hero text */
+.cream-hero-copy {
+  max-width: 760px;
+  padding: clamp(26px, 5vw, 76px);
+}
+
+.cream-hero-copy h1 {
+  max-width: 780px;
+  font-size: clamp(3.4rem, 7.5vw, 7rem);
+  line-height: 1.02;
+  letter-spacing: -.045em;
+}
+
+.cream-hero-copy > p:not(.cream-kicker) {
+  max-width: 550px;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.8;
+}
+
+.cream-hero {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cream-hero-model {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  z-index: -2;
+}
+
+.cream-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(36, 25, 29, .65) 0%,
+    rgba(36, 25, 29, .35) 50%,
+    rgba(36, 25, 29, .08) 100%
+  );
+}
+
+.cream-hero-copy,
+.cream-hero-copy h1,
+.cream-hero-copy p {
+  color: #fff;
+}
+
+/* Make product images fill their cards cleanly */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.products > *,
+.product-card {
+  min-width: 0;
+}
+
+.products img,
+.product-card img {
+  max-width: 100%;
+}
+
+.story {
+  align-items: center;
+  gap: clamp(24px, 5vw, 70px);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .cream-hero {
+    min-height: 560px;
+  }
+
+  .cream-hero-copy {
+    padding: 38px 28px;
+  }
+
+  .cream-hero-copy h1 {
+    font-size: clamp(3.1rem, 7vw, 5rem);
+  }
+
+  .header {
+    gap: 14px;
+    padding: 15px 22px;
+  }
+
+  .head-actions {
+    gap: 8px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .announcement {
+    padding: 9px 12px;
+    font-size: 10px;
+    letter-spacing: .08em;
+  }
+
+  .header {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .header nav,
+  #nav {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .header nav a,
+  #nav a {
+    font-size: 13px;
+  }
+
+  .head-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-left: auto;
+  }
+
+  .head-actions button {
+    min-height: 36px;
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .cream-hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+  }
+
+  .cream-hero-model {
+    object-position: 57% center;
+  }
+
+  .cream-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(36, 25, 29, .68),
+      rgba(36, 25, 29, .24)
+    );
+  }
+
+  .cream-hero-copy {
+    width: 100%;
+    padding: 38px 22px;
+  }
+
+  .cream-hero-copy h1 {
+    max-width: 100%;
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    line-height: 1.04;
+    letter-spacing: -.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .cream-hero-copy > p:not(.cream-kicker) {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .cream-kicker {
+    font-size: 11px;
+    letter-spacing: .12em;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .products > * {
+    width: 100%;
+  }
+
+  .product-card {
+    border-radius: 14px;
+  }
+
+  .product-card img,
+  .products img {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .section {
+    padding: 48px 17px;
+  }
+
+  .section-title {
+    gap: 12px;
+  }
+
+  .section-title h2,
+  .story h2,
+  .quiz-section h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .story > img {
+    width: 100%;
+    max-height: 390px;
+    object-fit: cover;
+  }
+
+  .reviews {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter {
+    padding: 48px 17px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter form input,
+  .newsletter form button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .drawer {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .checkout-modal {
+    width: calc(100% - 24px);
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+
+  .chat {
+    width: calc(100% - 24px);
+    max-width: 100%;
+  }
+
+  .tracking-input-row {
+    flex-direction: column;
+  }
+
+  .tracking-input-row input,
+  .tracking-input-row button {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .cream-hero-copy h1 {
+    font-size: 2.8rem;
+  }
+
+  .head-actions button {
+    font-size: 11px;
+    padding: 6px 7px;
+  }
+}
