@@ -3520,3 +3520,14 @@ button,
     overflow-wrap: break-word !important;
   }
 }
+
+
+/* GLOWVE MOBILE EMERGENCY FIX */
+@media screen and (max-width: 600px) {
+  .cream-social-proof {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
