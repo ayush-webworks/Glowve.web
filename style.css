@@ -3636,3 +3636,31 @@ button,
   position: relative;
   z-index: 2;
 }
+
+
+.cream-hero {
+  position: relative;
+  overflow: hidden;
+  background: #e8d8ce;
+}
+
+.cream-hero-model {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.cream-hero-overlay {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cream-hero-copy {
+  position: relative;
+  z-index: 2;
+}
