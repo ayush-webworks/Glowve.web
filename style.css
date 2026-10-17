@@ -280,7 +280,7 @@ button:disabled {
 
 .hero-image-frame img {
   width: 100%;
-  height: 100%;
+  height: 150%;
   object-fit: cover;
 }
 
