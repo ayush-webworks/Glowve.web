@@ -3500,3 +3500,23 @@ button,
     max-width: 150px;
   }
 }
+
+
+/* Hide 750K+ social proof card on mobile */
+@media (max-width: 600px) {
+  .cream-social-proof {
+    display: none !important;
+  }
+
+  .cream-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .cream-hero-copy > p:not(.cream-kicker) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
